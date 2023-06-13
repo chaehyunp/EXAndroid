@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/zzang_sheep_no"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ITEM TITLE"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_below="@+id/iv"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="12dp"
+            android:padding="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_low_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:textColor="@color/purple_500"
+            android:text="20000원"
+            android:layout_alignLeft="@+id/tv_title"
+            android:padding="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_mall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MALL NAME"
+            android:textSize="10sp"
+            android:layout_below="@+id/tv_low_price"
+            android:layout_alignLeft="@+id/tv_low_price"
+            android:layout_marginBottom="8dp"
+            android:padding="6dp"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

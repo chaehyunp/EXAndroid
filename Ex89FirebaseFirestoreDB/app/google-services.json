@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "79466994445",
+    "project_id": "ex89firestoredbhue",
+    "storage_bucket": "ex89firestoredbhue.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79466994445:android:2965166f379e3e93b5ae44",
+        "android_client_info": {
+          "package_name": "com.ch96.ex89firebasefirestoredb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79466994445-t5638rqqeqq3250b3t6iicqef099mca0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCjopQ9N3g3elft6twh4laW1vrlj5lDdME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79466994445-t5638rqqeqq3250b3t6iicqef099mca0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

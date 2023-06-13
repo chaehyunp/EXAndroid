@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_gallery"
+        android:title="Gallery"
+        android:icon="@drawable/baseline_image_24"/>
+
+    <item android:id="@+id/menu_send"
+        android:title="Send"
+        android:icon="@drawable/baseline_send_to_mobile_24"/>
+
+    <!-- sub menu를 가진 메뉴 아이템 -->
+    <item android:title="Account">
+        <menu>
+            <item android:id="@+id/menu_acc_id" android:title="ID"/>
+            <item android:id="@+id/menu_acc_pw" android:title="Password"/>
+        </menu>
+    </item>
+
+</menu>

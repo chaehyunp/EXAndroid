@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.ch96.ex97databinding.MyDataViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/black">
+
+        <!-- 기본적인 data binding 학습으로는 해결하기 어려운 문제 -->
+        <!-- 1) ImageView : 이미지 source가 대부분 서버에의 URL인 경우가 많음 -->
+        <!-- ImageView의 src 속성에는 res 폴더의 이미지만 설정 가능 -->
+        <!-- 즉, 이미지 URL을 설정하는 속성이 없음 -  이를 해결하려면, 새로운 속성을 만들어야함 -->
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_margin="4dp"
+            android:src="@{vm.img}"/>
+
+        <!-- 2) AdapterView(RecyclerView, ViewPager...) -->
+        <!-- 대량의 데이터 리스트를 설정할 속성이 없음 -->
+        <!-- 이럴때 새로운 리스트값을 설정할 수 있는 속성을 직접 만들어야함 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="4dp"
+            android:background="@color/teal_200"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            tools:listitem="@layout/recycler_item"/>
+
+        <!-- 위처럼 기본 뷰에 없던 속성을 새롭게 만드는 문법 : BindingAdapter -->
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- api28 버전 이하는 외부 저장소에 대한 동적 퍼미션 필요 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ex72CameraApp2"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- FileProvider를 등록 (authorities에는 패키지명) -->
+        <!-- android:exported="false" 꼭 false, 다른 앱에서 사용하지 못하게 -->
+        <!-- Uri는 민감 정보 외부에 노출되지않도록 permission 있음, 공개할때 임시 permission으로 보호 -->
+        <provider
+            android:authorities="com.ch96.ex72cameraapp2"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 프로바이더가 공개할 경로를 지정 -->
+            <!-- meta-data : 이 데이터가 무슨 데이터인지 설명하는 데이터 -->
+            <!-- name 정해져있으므로 devloper 사이트 참고 -->
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/paths"/>
+
+        </provider>
+
+    </application>
+
+</manifest>

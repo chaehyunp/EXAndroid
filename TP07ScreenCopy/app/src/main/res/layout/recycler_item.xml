@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_margin="16dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최대 22,000원 쿠폰"
+            android:fontFamily="@font/notosans_kr_regular"
+            android:includeFontPadding="false"
+            android:textSize="10sp"
+            android:textColor="#ffffff"
+            android:paddingVertical="2dp"
+            android:paddingHorizontal="8dp"
+            android:background="#FF5D5D"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">\
+
+        <ImageView android:id="@+id/img_main"
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/hotel01"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView android:id="@+id/img_star"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_star_24"
+            android:layout_marginTop="6dp"/>
+
+        <TextView android:id="@+id/txt_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9.5"
+            android:fontFamily="@font/worksans_bold"
+            android:includeFontPadding="false"
+            android:textSize="18sp"
+            android:textColor="#828282"
+            android:layout_alignBottom="@+id/img_star"
+            android:layout_toRightOf="@+id/img_star"
+            />
+
+        <TextView android:id="@+id/txt_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(1444)"
+            android:fontFamily="@font/worksans_regular"
+            android:includeFontPadding="false"
+            android:textSize="18sp"
+            android:textColor="#989898"
+            android:layout_alignBottom="@+id/img_star"
+            android:layout_toRightOf="@id/txt_rate"/>
+
+        <TextView android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="네스트호텔 인천"
+            android:fontFamily="@font/notosans_kr_regular"
+            android:includeFontPadding="false"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#454545"
+            android:layout_below="@+id/txt_rate"/>
+
+        <TextView android:id="@+id/txt_near"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인천공항 차량 10분"
+            android:fontFamily="@font/notosans_kr_regular"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:textColor="#aeaeae"
+            android:layout_below="@+id/txt_name"/>
+
+        <TextView android:id="@+id/txt_disrate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="49%"
+            android:fontFamily="@font/worksans_bold"
+            android:includeFontPadding="false"
+            android:textSize="14sp"
+            android:textColor="#FF5D5D"
+            android:layout_below="@+id/txt_near"
+            android:layout_marginTop="12dp"/>
+
+        <TextView android:id="@+id/txt_origprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="380,000"
+
+            android:fontFamily="@font/worksans_regular"
+            android:includeFontPadding="false"
+            android:textSize="12sp"
+            android:textColor="#aeaeae"
+            android:layout_alignBottom="@+id/txt_disrate"
+            android:layout_toRightOf="@+id/txt_disrate"
+            android:layout_marginLeft="8dp"/>
+
+        <TextView android:id="@+id/txt_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="193,000"
+            android:fontFamily="@font/worksans_bold"
+            android:includeFontPadding="false"
+            android:textSize="18sp"
+
+            android:textColor="#333333"
+            android:layout_below="@id/txt_disrate"/>
+
+        <TextView android:id="@+id/txt_won"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="원"
+            android:fontFamily="@font/notosans_kr_bold"
+            android:includeFontPadding="false"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_alignBottom="@+id/txt_price"
+            android:layout_toRightOf="@+id/txt_price"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

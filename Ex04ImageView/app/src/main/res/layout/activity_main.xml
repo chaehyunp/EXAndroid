@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+         android:layout_height="300dp"
+        android:src="@drawable/pms_mind"
+        android:scaleType="centerInside"
+        android:background="@drawable/ic_launcher_background"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btn01"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="KILL"/>
+
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="SORRY"/>
+
+    <Button
+        android:id="@+id/btn03"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="TIRED"/>
+
+    <Button
+        android:id="@+id/btn04"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:text="ALONE"/>
+
+    <!--  이미지뷰 사용할때 뷰크기에 wrap_content를 지정할때 주의점  -->
+    <!--   wrap은 원본이미지 크기가 기준    -->
+    <!--   실제 보이는 이미지의 사이즈로 이미지뷰의 크기를 조정해주는 속성 : adjustViewBound    -->
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pms_tired"
+        android:adjustViewBounds="true"/>
+
+</LinearLayout>

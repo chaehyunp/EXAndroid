@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MemberList</string>
+
+    <string name="menu_search">Search</string>
+    <string name="menu_add">Add</string>
+
+    <string name="dialog_in">입금</string>
+    <string name="dialog_out">출금</string>
+    <string name="dialog_memo">메모입력</string>
+
+    <string name="listview_item_io">입금</string>
+    <string name="listview_item_type">월급</string>
+    <string name="listview_item_memo">: 2월 월급</string>
+    <string name="listview_item_time">2023. 02. 16. 17:13</string>
+
+</resources>

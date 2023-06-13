@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView inside MainActivity"
+        android:textColor="@color/black"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="change text"/>
+
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="change text myfragment"
+        android:backgroundTint="@color/purple_200"/>
+
+    <!-- Fragment로 화면의 한 조각을 만들기 : xml에 붙이기 -->
+    <!-- tab의 경우 떼어내고 다른 Fragment를 붙여주어야하는데 이렇게 붙이면 뜯어낼 수 없음 -->
+    <!-- 동적제어(add,remove,replace) 불가능 -->
+    <fragment
+        android:id="@+id/frag_my"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.ch96.ex30fragment.MyFragment"
+        tools:layout="@layout/fragment_my"/>
+        <!-- tools:layout="@layout/fragment_my"> : fragout 미리 보기 가능 -->
+
+    </LinearLayout>

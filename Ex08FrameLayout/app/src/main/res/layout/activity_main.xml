@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_ny"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEWYORK"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/btn_pr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PARIS"
+            android:layout_margin="2dp"/>
+
+        <Button
+            android:id="@+id/btn_sd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SYDNEY"
+            android:layout_margin="2dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <!--    첫번째 화면 레이아웃    -->
+    <LinearLayout
+        android:id="@+id/layout01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/newyork"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NewYork"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+
+    </LinearLayout>
+
+    <!--    두번째 화면 레이아웃    -->
+    <LinearLayout
+        android:id="@+id/layout02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paris"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="24dp"/>
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/paris"/>
+
+    </LinearLayout>
+
+    <!--    세번째 화면 레이아웃    -->
+    <LinearLayout
+        android:id="@+id/layout03"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="150dp"
+            android:src="@drawable/sydney"/>
+
+    </LinearLayout>
+
+    </FrameLayout>
+
+
+</LinearLayout>

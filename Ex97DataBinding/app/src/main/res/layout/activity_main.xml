@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <!-- 1. 레이아웃 뷰와 바인딩을 할 데이터 변수 선언 -->
+    <data>
+        <variable
+            name="user"
+            type="com.ch96.ex97databinding.User" />
+    </data>
+
+    <!-- 2. 레이아웃 뷰 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <!-- 글씨를 보여주는 텍스트뷰 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{user.name}"/>
+
+        <!-- Int형 값을 보여주는 텍스트뷰 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@{String.valueOf(user.age)}"/>
+
+        <!-- Boolean 값을 보여주는 CheckBox -->
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Like"
+            android:checked="@{user.favor}"
+            android:onCheckedChanged="@{user::changeFavor}"/>
+
+        <!-- 클릭 이벤트에 따라 이름 글씨를 변경 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="change name"
+            android:onClick="@{user::changeName}"/>
+
+        <!-- age 값 1증가하는 버튼 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="increase age +1"
+            android:backgroundTint="@color/teal_200"
+            android:onClick="@{user::increaseAge}"/>
+
+        <!-- '좋아요' 체크상태 변경 버튼 -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="toggle Like"
+            android:backgroundTint="@color/cardview_dark_background"
+            android:onClick="@{(v)->user.toggleFavor()}"/>
+
+        <!-- EditText의 글씨 제어하기 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="enter text"
+            android:inputType="text"
+            android:onTextChanged="@{user::onTextChanged}"/>
+
+        <!-- EditText의 글씨가 변경될때마다 그 글씨를 보여주는 TextView -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:text="@{user.message}"/>
+
+        <!-- EditText의 글씨를 버튼이 클릭되면 TextView에 보여주기 -->
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="입력하세요"
+            android:inputType="text"
+            android:onTextChanged="@{(s,start,end,count)-> user.changeInputValue(s) }"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="작성완료"
+            android:onClick="@{v->user.clickBtn()}"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:padding="8dp"
+            android:text="@{user.value}"/>
+
+
+        <!-- Fragment에서 데이터바인딩 && 기본 속성으로 지정이 불가한 dataBinding -->
+        <fragment
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.ch96.ex97databinding.MyFragment"
+            tools:layout="@layout/fragment_my"/>
+
+    </LinearLayout>
+
+</layout>

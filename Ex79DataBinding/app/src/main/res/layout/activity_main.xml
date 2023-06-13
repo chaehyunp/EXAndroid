@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 1. 레이아웃 뷰와 바인딩할 데이터들 명칭과 클래스 지정 -->
+    <data>
+
+        <!-- 변수 만들기 -->
+        <variable
+            name="user"
+            type="com.ch96.ex79databinding.User" />
+
+    </data>
+
+    <!-- 2. 화면에 그려낼 레이아웃 뷰 : 기존의 최상위 뷰그룹 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 변수와 view 연결 -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:text="@{user.name}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:text="@{String.valueOf(user.age)}"/>
+        <!-- age는 int 형이기때문에 형변환 필요 자바의 String 클래스 이용 -->
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋아용"
+            android:checked="@{user.favor}"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="change text"
+            android:onClick="@{user::changeName}"/>
+        <!-- onClick 됐을때 실행되어야하는 함수 -->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="increase age"
+            android:onClick="@{user::increaseAge}"/>
+
+    </LinearLayout>
+
+
+</layout>

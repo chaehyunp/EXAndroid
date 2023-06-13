@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="dialog_image">
+        <item>@drawable/img_action</item>
+        <item>@drawable/img_bath</item>
+        <item>@drawable/img_cat</item>
+        <item>@drawable/img_photo</item>
+        <item>@drawable/img_rain</item>
+    </array>
+
+</resources>

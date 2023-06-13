@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="SAMPLE"
+    android:padding="8dp"
+    android:textColor="#ffff0000"
+    android:drawableRight="@drawable/baseline_arrow_drop_down_24">
+    <!-- EditText는 기본적으로 그림을 하나 가질 수 있음 -->
+
+</TextView>
